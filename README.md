@@ -1,9 +1,8 @@
-= Visualization Lab =
+# Visualization Lab #
 
 Experiments with data visualization.
 
-
-== Build ==
+## Build ##
 
 To build the project:
 
