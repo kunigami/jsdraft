@@ -1,5 +1,4 @@
 System.config({
-  baseURL: "./",
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {
@@ -14,10 +13,9 @@ System.config({
   },
 
   map: {
-    "babel": "npm:babel@5.8.21",
-    "babel-core": "npm:babel-core@5.8.22",
+    "babel": "npm:babel@5.8.23",
     "babel-runtime": "npm:babel-runtime@5.8.20",
-    "core-js": "npm:core-js@1.1.1",
+    "core-js": "npm:core-js@1.1.4",
     "point-in-polygon": "npm:point-in-polygon@1.0.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -81,8 +79,8 @@ System.config({
     "npm:babel-runtime@5.8.20": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:babel@5.8.21": {
-      "babel-core": "npm:babel-core@5.8.22",
+    "npm:babel@5.8.23": {
+      "babel-core": "npm:babel-core@5.8.23",
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
       "chokidar": "npm:chokidar@1.0.5",
       "commander": "npm:commander@2.8.1",
@@ -154,7 +152,7 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0"
     },
-    "npm:core-js@1.1.1": {
+    "npm:core-js@1.1.4": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
@@ -187,7 +185,7 @@ System.config({
     "npm:fsevents@0.3.8": {
       "events": "github:jspm/nodelibs-events@0.1.1",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "nan": "npm:nan@2.0.5",
+      "nan": "npm:nan@2.0.8",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
@@ -276,7 +274,7 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:nan@2.0.5": {
+    "npm:nan@2.0.8": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
