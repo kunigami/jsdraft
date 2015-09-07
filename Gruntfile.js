@@ -1,11 +1,13 @@
 module.exports = function(grunt) {
 
+  var taskList = ['systemjs', 'uglify'];
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       browser_js: {
         files: ['**/*.js', '!node_modules/**/*'],
-        tasks: ['browserify:debug'],
+        tasks: taskList,
       }
     },
     systemjs: {
@@ -25,10 +27,18 @@ module.exports = function(grunt) {
         options: {
         }
     },
+    uglify: {
+        compact: {
+            files: {
+                './dist/earthquake.min.js': ['./dist/earthquake.js']
+            }
+        }
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks("grunt-systemjs-builder");
-  grunt.registerTask('default', ['systemjs']);
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.registerTask('default', taskList);
 };
