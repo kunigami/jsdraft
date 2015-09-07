@@ -3,7 +3,7 @@ import {default as pointInsidePolygon} from 'point-in-polygon';
 var w = 1600;
 var h = 600;
 
-var TIME_UNIT = 1000
+var TIME_UNIT = 1000;
 
 var body = d3.select("body");
 

@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       browser_js: {
-        files: ['**/*.js', '!node_modules/**/*'],
+        files: ['**/*.js', '!node_modules/**/*', '!dist/**/*'],
         tasks: taskList,
       }
     },
@@ -23,8 +23,11 @@ module.exports = function(grunt) {
         files: [
             '**/*.js',
             '!node_modules/**/*',
+            '!jspm_packages/**/*',
+            '!dist/**/*'
         ],
         options: {
+            'esnext': true,
         }
     },
     uglify: {
@@ -41,4 +44,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-systemjs-builder");
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.registerTask('default', taskList);
+  grunt.registerTask('lint', ['jshint']);
 };
