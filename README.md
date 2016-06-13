@@ -1,6 +1,6 @@
-# Visualization Lab #
+# Javascript Drafts #
 
-Experiments with data visualization.
+A set of tiny projects to experiment with JavaScript.
 
 ## Build ##
 
