@@ -10,4 +10,4 @@ To build a specific project:
     
 Example:
 
-   grunt --project=earthquake
+    grunt --project=earthquake
