@@ -4,6 +4,10 @@ A set of tiny projects to experiment with JavaScript.
 
 ## Build ##
 
-To build the project:
+To build a specific project:
 
-    grunt
+    grunt --project=<PROJECT NAME>
+    
+Example:
+
+   grunt --project=earthquake
