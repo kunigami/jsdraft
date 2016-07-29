@@ -5,11 +5,15 @@ module.exports = function(grunt) {
   var configsBySource = {
     earthquake: {
       src: './01_earthquake/earthquake.js',
-      dest: './dist/earthquake/earthquake.js'
+      dest: './dist/01_earthquake/earthquake.js'
+    },
+    worker: {
+      src: './02_worker/main.js',
+      dest: './dist/02_worker/main.js'
     },
   }
 
-  var taskList = ['uglify', 'systemjs'];
+  var taskList = ['systemjs'];
 
   var projectName = grunt.option('project') || DEFAULT_PROJECT;
   var projectConfig = configsBySource[projectName];
@@ -17,6 +21,7 @@ module.exports = function(grunt) {
   if (!projectConfig) {
     console.error("Project doesn't have a configuration: " + projectName);
   }
+  console.log('Generating project', projectName);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
