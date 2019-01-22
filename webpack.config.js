@@ -1,9 +1,11 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./05_visited/prod/main.js",
+  entry: {
+    world_travel: "./build/js/world_travel/main.js"
+  },
   output: {
-    path: path.resolve("./05_visited/", "prod"),
-    filename: "bundle.js"
+    path: path.resolve("./prod/js/"),
+    filename: "[name].bundle.js"
   }
 };

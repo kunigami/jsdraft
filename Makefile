@@ -3,18 +3,11 @@ ALL_TRANSPILED_JS_FILES = $(shell find bin/ -type f -name '*.js')
 BIN_DIR := bin
 SRC_DIR := src
 
-# Execute code
-# run: transpile typecheck
-# 	node $(BIN_DIR)/eulerian_circuit.js
+WORLD_TRAVEL_DIR = world_travel
 
-WORLD_TRAVEL_DIR = 05_visited
-
-world_travel: $(WORLD_TRAVEL_DIR)/*.js
-	./node_modules/.bin/babel $(WORLD_TRAVEL_DIR)/src --out-dir $(WORLD_TRAVEL_DIR)/prod
-
-# When file changes, re-run babel
-# transpile: $(SRC_DIR)/*.js
-# 	./node_modules/.bin/babel $(SRC_DIR) --out-dir $(BIN_DIR)
+world_travel: src/js/$(WORLD_TRAVEL_DIR)/*.js
+	./node_modules/.bin/babel src/js/$(WORLD_TRAVEL_DIR) --out-dir build/js/$(WORLD_TRAVEL_DIR)
+	node_modules/.bin/webpack
 
 .flowconfig:
 	flow init
